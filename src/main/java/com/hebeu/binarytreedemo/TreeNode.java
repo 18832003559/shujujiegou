@@ -34,6 +34,15 @@ public class TreeNode {
         this.rightNode = rightNode;
     }
 
+    public int getValue() {
+
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public void frontShow() {
       //首先输出自己的值
       System.out.print(value+" ");
@@ -65,4 +74,24 @@ public class TreeNode {
         }
         System.out.print(value+" ");
     }
+
+    public TreeNode frontSearch(int i) {
+         TreeNode target=null;
+        if (this.value==i){
+           return this;
+        }else{
+            if (leftNode!=null){
+                target=leftNode.frontSearch(i);
+            }
+            if (target!=null){
+                return target;
+            }
+            if (rightNode!=null){
+                target=rightNode.frontSearch(i);
+            }
+        }
+          return target;
+
+    }
+
 }

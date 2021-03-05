@@ -28,14 +28,19 @@ public class Test {
         //把根节点赋给树
         binaryTree.setRoot(treeNode);
 
-        //遍历二叉树 前序遍历，先输出自己的值，然后是左树的然后是右树的
+        /*//遍历二叉树 前序遍历，先输出自己的值，然后是左树的然后是右树的
         binaryTree.frontShow();
         System.out.println();
         //遍历二叉树 中序遍历，先输出左节点的值，然后是自己的 最后是右节点
         binaryTree.mindleShow();
         System.out.println();
         //后序遍历，先输出右节点再输出左节点 最后是自己
-        binaryTree.afterShow();
+        binaryTree.afterShow();*/
+
+
+        //二叉树的查找 前序查找
+       TreeNode treeNode1= binaryTree.frontSearch(7);
+        System.out.println(treeNode1.getValue());
     }
 
 }
